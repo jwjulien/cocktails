@@ -1,0 +1,120 @@
+{
+    "title": "recipe",
+    "type": "object",
+    "description": "Top level container for a cocktail recipe.",
+    "properties": {
+        "title": {
+            "type": "string"
+        },
+        "description": {
+            "type": "string"
+        },
+        "author": {
+            "type": "string"
+        },
+        "source": {
+            "type": "string",
+            "$comment": "Book title or web URL where the original recipe can be found."
+        },
+        "yield": {
+            "type": "number",
+            "$comment": "How many individual drinks this recipe will yield unscaled."
+        },
+        "preparation": {
+            "type": "string",
+            "enum": [
+                "built",
+                "stirred",
+                "shaken",
+                "blended"
+            ]
+        },
+        "served": {
+            "type": "string",
+            "enum": [
+                "neat",
+                "straight up",
+                "on a rock",
+                "on the rocks"
+            ]
+        },
+        "glass": {
+            "type": "string",
+            "enum": [
+                "shot",
+                "rocks",
+                "old fashioned",
+                "tom collins",
+                "coupe",
+                "martini",
+                "wine"
+            ]
+        },
+        "ingredients": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "quantity": {
+                        "type": "number",
+                        "default": 1,
+                        "$comment": "How many of the 'unit' to use.  Not all units require a quantity - the default is assumed to be 1 if not specified."
+                    },
+                    "unit": {
+                        "type": "string",
+                        "enum": [
+                            "dash",
+                            "drop",
+                            "barspoon",
+                            "ounce",
+                            "twist",
+                            "each"
+                        ]
+                    },
+                    "ingredient": {
+                        "type": "string",
+                        "$comment": "Name of the ingredient - generic when possible, unless the ingredient is so important that no substitutions are possible.  Use the 'suggested' if a specific brand is preferred but not required."
+                    },
+                    "examples": {
+                        "type": "array",
+                        "$comment": "A list of possible options for this ingredient.",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "suggested": {
+                        "type": "string",
+                        "$comment": "Used to *suggest* a specific brand of an ingredient be used, but not strictly required."
+                    },
+                    "notes": {
+                        "type": "string",
+                        "$comment": "Any notes about how the ingredient should be specially manipulated."
+                    }
+                },
+                "required": [
+                    "unit",
+                    "ingredient"
+                ],
+                "additionalProperties": false
+            }
+        },
+        "instructions": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "notes": {
+            "type": "string"
+        }
+    },
+    "required": [
+        "title",
+        "yield",
+        "preparation",
+        "served",
+        "glass",
+        "ingredients",
+        "instructions"
+    ]
+}

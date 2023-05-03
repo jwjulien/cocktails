@@ -1,0 +1,41 @@
+{
+    "title": "Dirty Girl Scout",
+    "description": "So called because this one tastes just like a Girl Scouts Thin Mint cookie.",
+    "author": "Jared Julien",
+    "yield": 2,
+    "preparation": "stirred",
+    "served": "straight up",
+    "glass": "shot",
+    "notes": "I can't take explicit credit for this, but I don't have an explicit source.\n\nThis is also a pretty good sipper, either over a rock or straight up.",
+    "ingredients": [
+        {
+            "quantity": 1,
+            "unit": "ounce",
+            "ingredient": "irish cream",
+            "examples": [
+                "Bailey's",
+                "Carolans"
+            ]
+        },
+        {
+            "quantity": 1,
+            "unit": "ounce",
+            "ingredient": "coffee liquor",
+            "examples": [
+                "Kahlua",
+                "Mr Black"
+            ]
+        },
+        {
+            "quantity": 1,
+            "unit": "ounce",
+            "ingredient": "cream de menthe",
+            "notes": "Green is preferred."
+        }
+    ],
+    "instructions": [
+        "Add all ingredients to a mixing tin.",
+        "Add ice and stir until chilled.",
+        "Strain into 2 shot glasses."
+    ]
+}

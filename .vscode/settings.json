@@ -1,0 +1,18 @@
+{
+    "json.schemas": [
+        {
+            "fileMatch": [
+                "/Recipes/*.json"
+            ],
+            "url": "./Schema/recipe.schema.json"
+        }
+    ],
+    "cSpell.words": [
+        "barspoon",
+        "burbon",
+        "Campari",
+        "Carolans",
+        "demerara",
+        "turbinado"
+    ]
+}

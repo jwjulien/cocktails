@@ -1,0 +1,39 @@
+{
+    "title": "Old Pal",
+    "author": "Pam Greer",
+    "source": "https://www.sidewalkshoes.com/old-pal",
+    "yield": 1,
+    "preparation": "stirred",
+    "served": "on a rock",
+    "glass": "rocks",
+    "ingredients": [
+        {
+            "quantity": 1.5,
+            "unit": "ounce",
+            "ingredient": "rye whiskey"
+        },
+        {
+            "quantity": 0.75,
+            "unit": "ounce",
+            "ingredient": "dry vermouth"
+        },
+        {
+            "quantity": 0.75,
+            "unit": "ounce",
+            "ingredient": "Campari"
+        },
+        {
+            "unit": "twist",
+            "ingredient": "orange"
+        }
+    ],
+    "instructions": [
+        "Add ice cubes to a mixing glass.",
+        "Add a large cube to a rocks glass.",
+        "Pour in the whiskey, vermouth and Campari.",
+        "Stir for about 30 seconds.",
+        "Strain the cocktail over the ice in rocks glass.",
+        "Twist the orange peel over the drink to express the oils and then drop in the glass."
+    ],
+    "notes": "This version of the Old Pal cocktail is a little whiskey forward.  You can use equal parts whiskey, vermouth, and Campari to make a more traditional version of the cocktail."
+}
