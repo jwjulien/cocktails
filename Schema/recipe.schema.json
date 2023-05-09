@@ -67,9 +67,10 @@
                             "drop",
                             "barspoon",
                             "ounce",
-                            "twist",
-                            "each"
-                        ]
+                            "twist"
+                        ],
+                        "default": "ounce",
+                        "$comment": "Units to compliment the quantity.  If not specified, the unit is presumed to be 'each'."
                     },
                     "ingredient": {
                         "type": "string",
@@ -92,7 +93,6 @@
                     }
                 },
                 "required": [
-                    "unit",
                     "ingredient"
                 ],
                 "additionalProperties": false
