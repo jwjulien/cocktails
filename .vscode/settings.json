@@ -2,9 +2,9 @@
     "json.schemas": [
         {
             "fileMatch": [
-                "/Recipes/*.json"
+                "/recipes/*.json"
             ],
-            "url": "./Schema/recipe.schema.json"
+            "url": "./schema/recipe.schema.json"
         }
     ],
     "cSpell.words": [
@@ -12,7 +12,9 @@
         "burbon",
         "Campari",
         "Carolans",
+        "colada",
         "demerara",
+        "Piña",
         "turbinado"
     ]
 }

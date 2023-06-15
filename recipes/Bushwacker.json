@@ -1,0 +1,45 @@
+{
+    "title": "Bushwacker",
+    "author": "Nikki Webb",
+    "source": "https://www.acouplecooks.com/bushwacker-drink",
+    "description": "I give credit for this one to Nikki, though it's not her invention.  This is a cross between a Piña colada and a chocolate milkshake that we first discovered down in the Keys.",
+    "yield": 1,
+    "preparation": "blended",
+    "ingredients": [
+        {
+            "quantity": 1.5,
+            "unit": "ounce",
+            "ingredient": "dark rum"
+        },
+        {
+            "quantity": 0.5,
+            "unit": "ounce",
+            "ingredient": "coffee liquor",
+            "examples": ["Kahlua", "Mr Black"],
+            "suggested": "Mr Black"
+        },
+        {
+            "quantity": 1,
+            "unit": "ounce",
+            "ingredient": "cream de cacao"
+        },
+        {
+            "quantity": 1,
+            "unit": "ounce",
+            "ingredient": "cream of coconut",
+            "notes": "This is a coconut syrup from the booze aisle, not remotely the same as coconut milk."
+        },
+        {
+            "quantity": 1,
+            "unit": "ounce",
+            "ingredient": "milk",
+            "suggested": "2%"
+        }
+    ],
+    "instructions": [
+        "Add all ingredients to a blender and blend until smooth.",
+        "Optionally: garnish with shaved chocolate or grated nutmeg.",
+        "Add a straw and serve."
+    ],
+    "notes": "This works well in these quantities in a personal blender.  If making in a full size blender you wil want to double the quantities and make two drinks.  Big blenders don't blend small quantities very well."
+}
