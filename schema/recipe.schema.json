@@ -41,12 +41,13 @@
         "glass": {
             "type": "string",
             "enum": [
-                "shot",
-                "rocks",
-                "old fashioned",
-                "tom collins",
                 "coupe",
+                "fishbowl",
                 "martini",
+                "old fashioned",
+                "rocks",
+                "shot",
+                "tom collins",
                 "wine"
             ]
         },
