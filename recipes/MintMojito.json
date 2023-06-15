@@ -1,0 +1,54 @@
+{
+    "title": "Mint Mojito",
+    "description": "A traditional, bubbly Cuban cocktail with a refreshing pep of mint.  I set out to nail down a recipe to give Adam an excuse to harvest the mint he's been nurturing in his front yard for the better part of a decade.",
+    "source": "https://www.liquor.com/recipes/mojito/",
+    "preparation": "shaken",
+    "served": "on the rocks",
+    "glass": "highball",
+    "yield": 1,
+    "ingredients": [
+        {
+            "quantity": 3,
+            "ingredient": "mint leaves"
+        },
+        {
+            "quantity": 0.5,
+            "unit": "ounce",
+            "ingredient": "simple syrup"
+        },
+        {
+            "quantity": 2,
+            "unit": "ounce",
+            "ingredient": "white rum"
+        },
+        {
+            "quantity": 0.75,
+            "unit": "ounce",
+            "ingredient": "lime juice"
+        },
+        {
+            "quantity": 4,
+            "unit": "ounce",
+            "ingredient": "club soda",
+            "notes": "Exact quantity might vary.  Top up the glass, but it should be in the ball park of about 4 ounces."
+        },
+        {
+            "quantity": 1,
+            "ingredient": "lime wheel"
+        },
+        {
+            "quantity": 1,
+            "ingredient": "mint sprig"
+        }
+    ],
+    "instructions": [
+        "Add mint leaves and simple syrup to a shaker.",
+        "Lightly muddle the mint.",
+        "Add the rum, lime juice, and ice to the shaker.",
+        "Lightly shake.",
+        "Double strain into highball glass.",
+        "Add ice and top up with club soda.",
+        "Garnish with a lime wheel and mint spring."
+    ],
+    "notes": "Slap the mint before garnishing to help express the oils and bring out the mint flavor."
+}

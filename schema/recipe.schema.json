@@ -43,11 +43,11 @@
             "enum": [
                 "coupe",
                 "fishbowl",
+                "highball",
                 "martini",
                 "old fashioned",
                 "rocks",
                 "shot",
-                "tom collins",
                 "wine"
             ]
         },
