@@ -64,9 +64,10 @@
                     "unit": {
                         "type": "string",
                         "enum": [
+                            "barspoon",
+                            "cup",
                             "dash",
                             "drop",
-                            "barspoon",
                             "ounce",
                             "twist"
                         ],
@@ -113,8 +114,6 @@
         "title",
         "yield",
         "preparation",
-        "served",
-        "glass",
         "ingredients",
         "instructions"
     ]
