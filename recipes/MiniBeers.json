@@ -1,0 +1,24 @@
+{
+    "title": "Mini Beers",
+    "author": "Nikki Webb",
+    "description": "These shots only look like little beans but taste sweet and creamy.",
+    "yield": 1,
+    "glass": "shot",
+    "ingredients": [
+        {
+            "quantity": 1.5,
+            "unit": "ounce",
+            "ingredient": "Liquor 43",
+            "notes": "Chilled/frozen."
+        },
+        {
+            "quantity": 0.5,
+            "unit": "ounce",
+            "ingredient": "heavy cream"
+        }
+    ],
+    "instructions": [
+        "Add Liquor 43 to shot glass.",
+        "Gently float heavy cream over the top."
+    ]
+}
