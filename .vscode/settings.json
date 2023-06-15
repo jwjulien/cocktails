@@ -2,6 +2,7 @@
     "json.schemas": [
         {
             "fileMatch": [
+                "/ingredients/*.json",
                 "/recipes/*.json"
             ],
             "url": "./schema/recipe.schema.json"

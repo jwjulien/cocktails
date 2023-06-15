@@ -68,6 +68,7 @@
                             "cup",
                             "dash",
                             "drop",
+                            "gram",
                             "ounce",
                             "twist"
                         ],
@@ -112,8 +113,6 @@
     },
     "required": [
         "title",
-        "yield",
-        "preparation",
         "ingredients",
         "instructions"
     ]

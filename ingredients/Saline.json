@@ -1,0 +1,23 @@
+{
+    "title": "Saline Solution",
+    "author": "Dave Arnold",
+    "source": "Liquid Intelligence",
+    "description": "Best prepared in a dropper bottle, often times a few drops will take a drink to the next level without tasting \"salty\".",
+    "ingredients": [
+        {
+            "quantity": 30,
+            "unit": "gram",
+            "ingredient": "water"
+        },
+        {
+            "quantity": 7.5,
+            "unit": "gram",
+            "ingredient": "salt"
+        }
+    ],
+    "instructions": [
+        "Combine water and salt.",
+        "Stir/agitate until salt is dissolved - this will take some effort."
+    ],
+    "notes": "The quantities presented here were scaled to fit in a 1oz glass dropper bottle."
+}
