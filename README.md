@@ -6,6 +6,7 @@ My intent here is to capture the recipes needed to make various mixed drinks and
 
 A schema has been developed and is tied to the `ingredients` and `recipes` folders with VS Code workspace settings.  The `recipes` folder contains the various drink recipes while the `ingredients` folder contains recipes for some of the ingredients that need to be prepared for various drink recipes.
 
+> **_DISCLAIMER:_**: The recipes presented here are (mostly) alcoholic.  The author assumes no responsibility for how you use this information.  Please drink responsibly.
 
 
 
