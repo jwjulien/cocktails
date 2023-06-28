@@ -3,7 +3,7 @@
     "author": "Jared Julien",
     "source": "Public House, Bay City, Michigan",
     "description": "Public house certainly didn't invent this cocktail, but they make a damn fine version of it.  This is a decadent drink rich in coffee flavor.  My hack is to use cold brew concentrate rather than espresso simply for convenience.",
-    "preparation": "stirred",
+    "preparation": "shaken",
     "served": "straight up",
     "glass": "martini",
     "yield": 1,
@@ -36,9 +36,9 @@
         }
     ],
     "instructions": [
-        "In a mixing glass, combine the vodka, coffee liquor, cold brew, and simple syrup.",
-        "Add ice and stir.",
-        "Strain into a martini glass.",
+        "In a shaker, combine the vodka, coffee liquor, cold brew, and simple syrup.",
+        "Add ice and shake vigorously.",
+        "Strain into a chilled martini glass.",
         "Garnish with coffee beans."
     ]
 }
