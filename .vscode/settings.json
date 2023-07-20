@@ -8,6 +8,12 @@
             "url": "./schema/recipe.schema.json"
         }
     ],
+    "yaml.schemas": {
+        "./schema/recipe.schema.json": [
+            "/ingredients/*.yaml",
+            "/recipes/*.yaml"
+        ]
+    },
     "cSpell.words": [
         "barspoon",
         "burbon",
