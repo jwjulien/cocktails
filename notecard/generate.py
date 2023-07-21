@@ -162,7 +162,13 @@ def main() -> int:
                 author.add(recipe['author'] + "'s", color=colors.GRAY, italic=True)
                 y = author.render(screen, Point(margin, y)).y
 
-            # Start with a title
+            # Then a version.
+            version = TextBox(width / 4, font=small)
+            version.add(f"Version: {recipe['version']}", italic=True, color=colors.GRAY)
+            # TODO: This magic 200 offset is not the ideal way to right-align the version number.
+            version.render(screen, Point(width - margin - (200 * scale), y))
+
+            # Next, a title.
             title = TextBox(width - (margin * 2), font=h1)
             title.add(recipe['title'], underline=True)
             y = title.render(screen, Point(margin, y)).y
