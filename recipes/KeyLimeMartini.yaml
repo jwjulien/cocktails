@@ -1,0 +1,37 @@
+title: Key Lime Martini
+version: 1
+description: A suggestion from Google for a refreshing key lime pie inspired cocktail.
+source: https://www.tastingtable.com/1338093/key-lime-pie-martini-recipe/
+preparation: shaken
+served: straight up
+glass: martini
+yield: 1
+ingredients:
+- quantity: 2
+  unit: ounce
+  ingredient: vanilla vodka
+- quantity: 2
+  unit: ounce
+  ingredient: coconut rum
+- quantity: 1
+  unit: ounce
+  ingredient: Key lime juice
+- quantity: 1
+  unit: ounce
+  ingredient: cream of coconut
+- quantity: 0.5
+  unit: ounce
+  ingredient: simple syrup
+- ingredient: graham cracker crumbs
+  notes: for rim
+- ingredient: Key lime juice
+  notes: for rim
+- quantity: 1
+  ingredient: Key lime wheel
+  notes: for garnish
+instructions:
+- Rim a martini glass using key lime juice and graham cracker crumbs.
+- To a shaker, add the vodka, rum, key lime juice, cream of coconut, and simple syrup.
+- Add ice and shake.
+- Strain into prepared glass.
+- Garnish with a key lime wheel.

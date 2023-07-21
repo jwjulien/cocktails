@@ -6,7 +6,7 @@
         "title": {
             "type": "string"
         },
-        "version" {
+        "version": {
             "type": "number"
         },
         "description": {

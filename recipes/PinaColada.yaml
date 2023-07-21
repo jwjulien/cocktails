@@ -1,0 +1,35 @@
+title: Pina Colada
+version: 1
+description: The classic standard vacation drink.
+source: https://www.foodnetwork.com/recipes/pina-colada-recipe0-1956362
+preparation: blended
+glass: pina colada
+yield: 2
+ingredients:
+- quantity: 1.5
+  unit: cup
+  ingredient: ice
+- quantity: 0.5
+  unit: cup
+  ingredient: frozen, diced pineapple
+- quantity: 2
+  unit: ounce
+  ingredient: pineapple juice
+- quantity: 2
+  unit: ounce
+  ingredient: cream of coconut
+- quantity: 1.5
+  unit: ounce
+  ingredient: white rum
+- quantity: 1
+  unit: ounce
+  ingredient: dark rum
+- quantity: 2
+  ingredient: pineapple wedges
+  notes: for garnish
+instructions:
+- Combine the ice, frozen pineapple, pineapple juice, cream of coconut, and rums in
+  a blender.
+- Blend until smooth and frosty.
+- Divide into two glasses.
+- Garnish with pineapple wedge and serve with a straw.

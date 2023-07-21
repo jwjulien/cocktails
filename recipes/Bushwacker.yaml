@@ -1,0 +1,39 @@
+title: Bushwacker
+version: 1
+author: Nikki Webb
+source: https://www.acouplecooks.com/bushwacker-drink
+description: >-
+  I give credit for this one to Nikki, though it's not her invention.  This is a cross between a Pina colada and a
+  chocolate milkshake that we first discovered down in the Keys.
+yield: 2
+preparation: blended
+ingredients:
+- quantity: 3
+  unit: ounce
+  ingredient: dark rum
+- quantity: 1
+  unit: ounce
+  ingredient: coffee liquor
+  examples:
+  - Kahlua
+  - Mr Black
+  suggested: Mr Black
+- quantity: 2
+  unit: ounce
+  ingredient: cream de cacao
+- quantity: 2
+  unit: ounce
+  ingredient: cream of coconut
+  notes: a coconut syrup from the booze aisle, not coconut "milk"
+- quantity: 2
+  unit: ounce
+  ingredient: milk
+  suggested: 2%
+- quantity: 3
+  unit: cup
+  ingredient: ice
+instructions:
+- Add all ingredients to a blender and blend until smooth.
+- Optionally, garnish with shaved chocolate or grated nutmeg.
+- Add a straw and serve.
+notes: Single servings work fine in a personal blender - just halve the ingredients.

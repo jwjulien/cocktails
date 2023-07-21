@@ -7,22 +7,22 @@ author: Jared Julien
 preparation: built
 yield: 1
 ingredients:
-  - quantity: 3
-    unit: ounce
-    ingredient: vodka
-    suggested: Titos
-  - quantity: 4
-    unit: ounce
-    ingredient: Mr and Mrs T's bold bloody mary mix
-  - quantity: 4
-    unit: ounce
-    ingredient: Zing Zang bloody mary mix
-  - quantity: 0.5
-    unit: ounce
-    ingredient: pickle juice
-  - quantity: 1
-    ingredient: pickle spear
-    notes: for garnish
+- quantity: 3
+  unit: ounce
+  ingredient: vodka
+  suggested: Titos
+- quantity: 4
+  unit: ounce
+  ingredient: Mr and Mrs T's bold bloody mary mix
+- quantity: 4
+  unit: ounce
+  ingredient: Zing Zang bloody mary mix
+- quantity: 0.5
+  unit: ounce
+  ingredient: pickle juice
+- quantity: 1
+  ingredient: pickle spear
+  notes: for garnish
 instructions:
   - Combine all ingredients in a glass over ice and stir to combine.
   - Garnish with whatever tickles your fancy and serve.

@@ -6,31 +6,31 @@ description: >-
 preparation: blended
 yield: 2
 ingredients:
-  - quantity: 4
-    unit: ounce
-    ingredient: tequila
-    suggested: Hornitos
-  - quantity: 2
-    unit: ounce
-    ingredient: lime juice
-  - quantity: 2
-    unit: ounce
-    ingredient: triple sec
-  - quantity: 2
-    unit: ounce
-    ingredient: simple syrup
-  - quantity: 3
-    unit: cup
-    ingredient: ice
-  - quantity: 2
-    ingredient: lime wedge
-    notes: for rimming and garnish
-  - ingredient: kosher salt or Tajin
-    notes: for rimming glass
-  - quantity: 2
-    unit: ounce
-    ingredient: Ancho Reyes chili liquor
-    notes: optional, but tasty floater
+- quantity: 4
+  unit: ounce
+  ingredient: tequila
+  suggested: Hornitos
+- quantity: 2
+  unit: ounce
+  ingredient: lime juice
+- quantity: 2
+  unit: ounce
+  ingredient: triple sec
+- quantity: 2
+  unit: ounce
+  ingredient: simple syrup
+- quantity: 3
+  unit: cup
+  ingredient: ice
+- quantity: 2
+  ingredient: lime wedge
+  notes: for rimming and garnish
+- ingredient: kosher salt or Tajin
+  notes: for rimming glass
+- quantity: 2
+  unit: ounce
+  ingredient: Ancho Reyes chili liquor
+  notes: optional, but tasty floater
 instructions:
   - Run lime wedge around rim of two glasses.
   - Roll rim in kosher salt or Tajin.

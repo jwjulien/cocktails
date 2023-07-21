@@ -1,0 +1,36 @@
+title: Pirates Cove
+version: 1
+source: The Ambassador Restaurant, Houghton, Michigan
+description: >-
+  I mistaken referred to this delicious fishbowl drink as a Superior Tide (another great cocktail from the Ambo) for
+  years.  This is a favorite summertime sipper that's difficult to screw up, though Lani did once...  Admittedly I don't
+  know the exact proportions, the numbers here are just kind of a best guess.
+preparation: built
+served: on the rocks
+glass: fishbowl
+yield: 1
+ingredients:
+- quantity: 2
+  unit: ounce
+  ingredient: spiced rum
+  suggested: Captain Morgan
+- quantity: 1
+  unit: ounce
+  ingredient: blue curacao
+- quantity: 1
+  unit: ounce
+  ingredient: lime juice
+- quantity: 1
+  unit: ounce
+  ingredient: simple syrup
+- quantity: 8
+  unit: ounce
+  ingredient: Squirt
+  notes: does **NOT** work with Sprite
+instructions:
+- Combine all ingredients over ice in the glass.
+- Stir to combine.
+- Serve with a straw.
+notes: >-
+  They don't do any fancy prep with this one at the Ambo - they just build it right in the glass with way too much ice.
+  I think that just fits with this style of drink.  Don't church it up, son!

@@ -1,0 +1,29 @@
+title: Lemon Drop
+version: 1
+description: >-
+  Traditionally just vodka, this version of the Lemon drop incorporates Limoncello which really makes it special.
+author: Jared Julien
+yield: 1
+glass: shot
+preparation: stirred
+ingredients:
+- quantity: 1
+  unit: ounce
+  ingredient: vodka
+- quantity: 0.5
+  unit: ounce
+  ingredient: Limoncello
+- ingredient: sugar
+- quantity: 1
+  ingredient: lemon wedge
+instructions:
+- Run lemon around rim of shot glass and roll in sugar.
+- Add vodka and Limoncello to mixing glass.
+- Add ice and stir to chill.
+- Strain into prepared shot glass.
+- Serve with lemon wedge.
+- After throwing back shot, bite lemon wedge - the acidity of the lemon should be
+  balanced by the sweetness of the shot.
+notes: >-
+  Instructions, as written, are for 1 shot, though nobody drinks this one alone.  Just scale it up as needed for
+  however many shots you're making and mix them all at the same time.

@@ -1,0 +1,36 @@
+title: Espresso Martini
+version: 2
+author: Jared Julien
+source: Public House, Bay City, Michigan
+description: >-
+  Public house certainly didn't invent this cocktail, but they make a damn fine version of it.  This is a decadent
+  drink rich in coffee flavor.  My hack is to use cold brew concentrate rather than espresso simply for convenience.
+  I don't think it tastes any better, but espresso is inconvenient at home.
+preparation: shaken
+served: straight up
+glass: martini
+yield: 1
+ingredients:
+- quantity: 2
+  unit: ounce
+  ingredient: vodka
+- quantity: 0.5
+  unit: ounce
+  ingredient: coffee liquor
+  examples:
+  - Mr Black
+  - Kahlua
+  suggested: Mr Black
+- quantity: 1
+  unit: ounce
+  ingredient: cold brew concentrate
+- quantity: 0.5
+  unit: ounce
+  ingredient: simple syrup
+- quantity: 3
+  ingredient: dark roast coffee beans
+instructions:
+- In a shaker, combine the vodka, coffee liquor, cold brew, and simple syrup.
+- Add ice and shake vigorously.
+- Strain into a chilled martini glass.
+- Garnish with coffee beans.
