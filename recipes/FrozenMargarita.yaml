@@ -1,0 +1,42 @@
+title: Frozen Margarita
+description: >-
+  The classic cocktail.  This is the recipe from scratch, though there's no shame in using a decent quality premix,
+  IMHO.
+preparation: blended
+yield: 2
+ingredients:
+  - quantity: 4
+    unit: ounce
+    ingredient: tequila
+    suggested: Hornitos
+  - quantity: 2
+    unit: ounce
+    ingredient: lime juice
+  - quantity: 2
+    unit: ounce
+    ingredient: triple sec
+  - quantity: 2
+    unit: ounce
+    ingredient: simple syrup
+  - quantity: 3
+    unit: cup
+    ingredient: ice
+  - quantity: 2
+    ingredient: lime wedge
+    notes: for rimming and garnish
+  - ingredient: kosher salt or Tajin
+    notes: for rimming glass
+  - quantity: 2
+    unit: ounce
+    ingredient: Ancho Reyes chili liquor
+    notes: optional, but tasty floater
+instructions:
+  - Run lime wedge around rim of two glasses.
+  - Roll rim in kosher salt or Tajin.
+  - Combine tequila, lime juice, triple sec, and simple syrup in blender and blend until smooth.
+  - Transfer to prepared glasses.
+  - Optionally, float 1 ounce of Ancho liquor on each glass (do not stir).
+  - Add a straw and serve.
+notes: |-
+  - Single servings work fine in a personal blender - just halve the ingredients.
+  - A rim of Tajin, rather than salt, is a very nice change.
