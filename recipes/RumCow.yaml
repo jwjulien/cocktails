@@ -1,0 +1,31 @@
+title: Rum Cow
+version: 1
+source: https://cocktailpartyapp.com/drinks/rum-cow
+description: A boozy-milk concoction that can be tweaked and adjusted endlessly using different rums.
+preparation: shaken
+served: on the rocks
+glass: rocks
+yield: 1
+ingredients:
+  - quantity: 1.5
+    unit: ounce
+    ingredient: Rum
+    suggested: spiced rum
+    notes: any rum will work, light dark, spiced, etc.
+  - quantity: 6
+    unit: ounce
+    ingredient: milk
+  - quantity: 0.5
+    unit: ounce
+    ingredient: simple syrup
+    notes: light or dark
+  - quantity: 2
+    unit: dash
+    ingredient: Angostura bitters
+  - quantity: 1
+    unit: dash
+    ingredient: vanilla extract
+instructions:
+  - Add all ingredients to a shaker, add ice, and shake.
+  - Strain into a rocks glass with fresh ice.
+  - Garnish with fresh nutmeg.
