@@ -1,0 +1,29 @@
+title: Butterbeer
+version: 1
+source: https://www.liquor.com/recipes/harry-potter-butterbeer/
+description: An adult version of the tasty drink from the Harry Potter franchise.
+yield: 1
+preparation: built
+served: straight up
+glass: mug
+notes: A frozen mug is ideal for this drink.
+ingredients:
+  - quantity: 1
+    unit: ounce
+    ingredient: butterscotch schnapps
+    examples:
+    - "Buttershots"
+  - quantity: 1
+    unit: ounce
+    ingredient: vanilla vodka
+  - quantity: 6
+    unit: ounce
+    ingredient: cream soda
+  - ingredient: whipped cream
+    notes: as garnish
+  - ingredient: butterscotch syrup
+    notes: as garnish
+instructions:
+  - "To a frosty mug, add butterscotch schnapps, vanilla vodka and cream soda."
+  - "Top with a generous dollop of whipped cream."
+  - "Drizzle with butterscotch syrup."
