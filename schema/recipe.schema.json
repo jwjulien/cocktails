@@ -77,6 +77,8 @@
                             "drop",
                             "gram",
                             "ounce",
+                            "rinse",
+                            "spritz",
                             "twist"
                         ],
                         "default": "ounce",

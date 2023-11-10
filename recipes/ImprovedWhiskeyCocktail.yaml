@@ -1,0 +1,33 @@
+title: Improved Whiskey Cocktail
+version: 1
+author: Greg Titian
+source: https://www.youtube.com/watch?v=X-36v2b0Pn8&t=1772s
+description: A complicated Old Fashioned.  Perhaps a New-Fashioned?
+preparation: stirred
+glass: old fashioned
+served: on a rock
+yield: 1
+ingredients:
+  - quantity: 0.25
+    unit: ounce
+    ingredient: simple syrup
+  - quantity: 0.25
+    unit: ounce
+    ingredient: Maraschino liquor
+  - quantity: 2
+    unit: dash
+    ingredient: Angostura bitters
+  - quantity: 2
+    unit: dash
+    ingredient: Peychaud’s bitters
+  - quantity: 2
+    unit: ounce
+    ingredient: rye Whiskey
+  - unit: spritz
+    ingredient: absinthe
+  - ingredient: lemon twist
+instructions:
+  - Spritz serving glass with absinthe and add large ice cube.
+  - Add simple, Maraschino, bitters, and whiskey to a mixing glass.
+  - Add ice and stir.
+  - Strain into mixing glass and serve with lemon twist.
