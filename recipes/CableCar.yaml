@@ -1,0 +1,34 @@
+title: Cable Car
+version: 1
+source: https://robbreport.com/food-drink/spirits/best-cable-car-recipe-spiced-rum-cocktail-1235426267/
+description: A standout for using the oft scoffed "spiced rum", this one truly is a cocktail in it's own right.
+yield: 1
+preparation: shaken
+served: straight up
+glass: coupe
+ingredients:
+  - quantity: 1.5
+    unit: ounce
+    ingredient: spiced rum
+    suggested: Captain Morgan
+    notes: don't church this one up, son
+  - quantity: 0.5
+    unit: ounce
+    ingredient: orange Curacao
+  - quantity: 0.75
+    unit: ounce
+    ingredient: lemon juice
+  - quantity: 0.5
+    unit: ounce
+    ingredient: simple syrup
+    notes: or less, to taste
+  - ingredient: orange peel
+    notes: for garnish
+instructions:
+  - Rim a martini glass or coupe with cinnamon and sugar.
+  - Add all ingredients to a shaker, add ice, and shake.
+  - Strain into the rimmed glass.
+  - Garnish with an orange peel.
+notes: >-
+  Yes, this really calls for "spiced rum" such as Captain Morgan.  This recipe depends upon those vanilla notes so
+  don't go tryin' to make this one with any of those fancy, expensive rums.
