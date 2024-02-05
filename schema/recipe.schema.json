@@ -45,6 +45,7 @@
         "glass": {
             "type": "string",
             "enum": [
+                "collins",
                 "coupe",
                 "fishbowl",
                 "highball",

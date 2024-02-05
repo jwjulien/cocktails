@@ -1,0 +1,35 @@
+title: Queens Park Swizzle
+description: Brought to you courtesy of the Queen’s Park Hotel in Port au Spain Trinidad.
+source: https://www.youtube.com/watch?v=E2ZVDGLpjqI
+version: 1
+yield: 1
+preparation: built
+served: on crushed ice
+glass: collins
+ingredients:
+  - quantity: 8
+    ingredient: mint leaves
+  - quantity: 0.5
+    unit: ounce
+    ingredient: lime juice
+  - quantity: 0.5
+    unit: ounce
+    ingredient: demerara syrup
+  - quantity: 2
+    unit: dash
+    ingredient: Angostura bitters
+  - quantity: 2
+    unit: ounce
+    ingredient: dark blended rum
+  - quantity: 2
+    unit: dash
+    ingredient: Angostura bitters
+    notes: for garnish
+  - ingredient: mint sprig
+    notes: for garnish
+instructions:
+  - Add mint leaves to glass.
+  - Fill 2/3 with crushed ice.
+  - Add lime juice, demerara, 2 dashes of bitters, and rum.  Swizzle to mix.
+  - Top off with more crushed ice.
+  - Garnish with 2 additional dashes of bitters and sprig of mint and a straw.
