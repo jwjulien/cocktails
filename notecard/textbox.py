@@ -129,6 +129,10 @@ class TextBox:
     font: pygame.font = field(default_factory=lambda: pygame.font.SysFont('Calibri', 12))
 
 
+    def __bool__(self) -> bool:
+        return bool(self.texts)
+
+
     def add(self, text: str, **args) -> None:
         """This is a convenience method for add Text's to this TextBox.  Equivalent to:
 

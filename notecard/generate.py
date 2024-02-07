@@ -220,7 +220,10 @@ def main() -> int:
                 details.add(f"Served: {recipe['served'].title()}\n")
             if 'glass' in recipe:
                 details.add(f"In a: {recipe['glass'].title()} Glass\n")
-            y2 = details.render(screen, Point(width / 2 + margin * 2, y)).y
+            if details:
+                y2 = details.render(screen, Point(width / 2 + margin * 2, y)).y
+            else:
+                y2 = y
 
             # Move Y down to be below whichever section was larger.
             y = max(y1, y2) + spacing
