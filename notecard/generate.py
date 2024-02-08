@@ -61,7 +61,7 @@ def fraction(value: float) -> str:
     if integer > 0:
         text += f'{integer} '
     if decimal > 0:
-        text += str(Fraction(decimal))
+        text += str(Fraction(decimal).limit_denominator(32))
     return text
 
 
