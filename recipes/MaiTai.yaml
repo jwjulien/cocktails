@@ -1,0 +1,32 @@
+title: Mai Tai
+version: 1
+description: The true, classic recipe without the extra fruit juices most places add.
+source: https://www.delish.com/cooking/recipe-ideas/a43402365/classic-mai-tai-recipe/
+yield: 1
+preparation: shaken
+served: on crushed ice
+glass: rocks
+ingredients:
+- quantity: 1
+  unit: ounce
+  ingredient: lime juices
+- quantity: 1
+  unit: ounce
+  ingredient: light rum
+- quantity: 0.75
+  unit: ounce
+  ingredient: dry curaçao
+- quantity: 0.75
+  unit: ounce
+  ingredient: orgeat syrup
+- quantity: 0.5
+  unit: ounce
+  ingredient: dark dum
+- ingredient: mint sprig, lime wheel, and/or Maraschino cherry
+  notes: for garnish
+instructions:
+- To a shaker add the lime juice, light rum, curaçao and orgeat syrup.
+- Add ice and shake.
+- Strain into ice-filled rocks glass.
+- Float dark rum on top.
+- Garnish with mint sprig, lime wheel, and/or Maraschino cherry.

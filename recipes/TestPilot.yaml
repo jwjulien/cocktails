@@ -1,0 +1,36 @@
+title: Test Pilot
+version: 1
+source: https://tuxedono2.com/test-pilot-cocktail-recipe
+description: A complex tiki drink that rewards with a blast confectionary flavors perfect for cold weather or a rainy day.
+yield: 1
+preparation: shaken
+served: on crushed ice
+glass: tiki
+ingredients:
+- quantity: 1.5
+  unit: ounce
+  ingredient: dark rum
+- quantity: 0.75
+  unit: ounce
+  ingredient: light rum
+- quantity: 0.5
+  unit: ounce
+  ingredient: falernum
+- quantity: 0.5
+  unit: ounce
+  ingredient: orange liquor
+- quantity: 0.5
+  unit: ounce
+  ingredient: lime juice
+- quantity: 1
+  unit: dash
+  ingredient: Angostura bitters
+- quantity: 1
+  unit: dash
+  ingredient: absinthe
+- quantity: 1
+  unit: cup
+  ingredient: crushed ice
+instructions:
+- Combine all ingredients in a shaker and shake.
+- Pour, un-gated, over more crushed ice.

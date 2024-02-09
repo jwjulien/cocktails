@@ -1,0 +1,30 @@
+title: Planter's Punch
+version: 1
+source: https://tuxedono2.com/planter-s-punch-cocktail-recipe
+description: A refreshing cross between an old fashioned and a daiquiri.
+yield: 1
+preparation: shaken
+served: on crushed ice
+glass: rocks
+ingredients:
+- quantity: 3
+  unit: ounce
+  ingredient: dark rum
+- quantity: 1
+  unit: ounce
+  ingredient: lime juice
+- quantity: 0.75
+  unit: ounce
+  ingredient: simple syrup
+- quantity: 0.25
+  unit: ounce
+  ingredient: allspice dram
+- quantity: 2
+  unit: dash
+  ingredient: Angostura bitters
+- ingredient: mint sprig
+  notes: for garnish
+instructions:
+- Combine all ingredients in a shaker with crushed ice.
+- Shake vigorously and strain into lowball filed with crushed ice.
+- Garnish with a sprig of mint.

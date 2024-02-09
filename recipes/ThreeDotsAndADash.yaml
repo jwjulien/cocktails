@@ -1,0 +1,39 @@
+title: Three Dots & A Dash
+version: 1
+source: https://tuxedono2.com/three-dots-a-dash-cocktail-recipe
+description: Recognizable by its three cherries, this drink is pure tiki.
+yield: 1
+preparation: shaken
+served: on crushed ice
+glass: tiki
+ingredients:
+- quantity: 2
+  unit: ounce
+  ingredient: dark rum
+- quantity: 0.5
+  unit: ounce
+  ingredient: lime juice
+- quantity: 0.5
+  unit: ounce
+  ingredient: orange juice
+- quantity: 0.5
+  unit: ounce
+  ingredient: simple syrup
+- quantity: 0.25
+  unit: ounce
+  ingredient: falernum
+- quantity: 0.25
+  unit: ounce
+  ingredient: allspice dram
+- quantity: 1
+  unit: dash
+  ingredient: Angostura bitters
+- quantity: 3
+  ingredient: cherries
+  notes: for garnish
+- ingredient: pineapple chunk
+  notes: for garnish
+instructions:
+- Combine all ingredients in a cocktail shaker.
+- Shake vigorously over crushed ice, for thirty seconds to a minute.
+- Strain into a tall glass filled with more crushed ice and garnish with cherries and pineapple.
