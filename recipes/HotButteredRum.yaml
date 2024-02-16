@@ -1,0 +1,27 @@
+title: Hot Buttered Rum
+version: 1
+description: A warm, buttery delicious drink for cold weather.
+author: Greg Titian
+source: https://www.youtube.com/watch?v=cCbEwyntSCM
+yield: 1
+preparation: built
+glass: toddy
+ingredients:
+- quantity: 2
+  unit: barspoon
+  ingredient: demerara sugar
+- quantity: 2
+  unit: ounce
+  ingredient: brown butter rum
+- quantity: 4
+  unit: ounce
+  ingredient: hot water
+- quantity: 1
+  ingredient: star anise
+  notes: for garnish
+- quantity: 1
+  ingredient: cinnamon stick
+  notes: for garnish
+instructions:
+- Combine sugar, butter rum, and hot water in a toddy glass.
+- Garnish with star anise and cinnamon stick.
