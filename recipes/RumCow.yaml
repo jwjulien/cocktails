@@ -4,7 +4,7 @@ source: https://cocktailpartyapp.com/drinks/rum-cow
 description: A boozy-milk concoction that can be tweaked and adjusted endlessly using different rums.
 preparation: shaken
 served: on the rocks
-glass: rocks
+glass: lowball
 yield: 1
 ingredients:
   - quantity: 1.5

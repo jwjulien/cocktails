@@ -3,7 +3,7 @@ source: https://www.liquor.com/recipes/white-russian/
 description: The Dude's preferred drink.
 version: 1
 served: on the rocks
-glass: rocks
+glass: lowball
 preparation: built
 yield: 1
 ingredients:
