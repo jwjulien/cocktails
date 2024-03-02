@@ -23,10 +23,13 @@
 # Imports
 # ----------------------------------------------------------------------------------------------------------------------
 import logging
+from importlib import metadata
 
 import click
 from rich import print
 from yaml import safe_load
+
+from cocktails.notecard.generate import notecard
 
 
 
@@ -36,12 +39,14 @@ from yaml import safe_load
 # ----------------------------------------------------------------------------------------------------------------------
 @click.group()
 @click.option('-v', '--verbose', count=True, help='increase verbosity of output')
+@click.version_option(metadata.version('cocktails'))
 def cli(verbose):
     """The cocktail tool - for managing cocktail recipes and ingredients."""
     # Setup logging output.
     levels = [logging.WARNING, logging.INFO, logging.DEBUG]
     level = levels[min(2, verbose)]
     logging.basicConfig(level=level)
+
 
 
 
@@ -70,6 +75,8 @@ def ingredients(recipes):
         recipes = ingredients[ingredient]
         print(f"- [bold yellow]{ingredient.title()}[/]: \[[i cyan]{', '.join(recipes)}[/]]")
 
+
+cli.add_command(notecard)
 
 
 

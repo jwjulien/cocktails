@@ -17,7 +17,7 @@
 # OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
 # OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 # ----------------------------------------------------------------------------------------------------------------------
-"""Notecard generator main function."""
+"""Notecard generator command for the cocktail tool."""
 
 # ======================================================================================================================
 # Imports
@@ -26,7 +26,6 @@ import os
 import logging
 import json
 import glob
-from importlib import metadata
 from fractions import Fraction
 from io import BytesIO
 
@@ -37,7 +36,7 @@ import yaml
 from PIL import Image
 import img2pdf
 
-from notecard import colors
+from cocktails.notecard import colors
 from notecard.textbox import TextBox
 from notecard.geometry import Point
 
@@ -70,22 +69,15 @@ def fraction(value: float) -> str:
 # ======================================================================================================================
 # Main Function
 # ----------------------------------------------------------------------------------------------------------------------
-@click.command
-@click.argument('recipe', nargs=-1)
+@click.command()
+@click.argument('recipe', nargs=-1, required=True)
 @click.option('-o', '--output', type=click.Path(dir_okay=False), help='path to PDF output')
 @click.option('-s', '--show', is_flag=True, help='pause to view card rendering before exiting')
-@click.option('-v', '--verbose', count=True, help='increase verbosity of output')
-@click.version_option(metadata.version('cocktails'))
-def main(recipe, output, show, verbose) -> int:
+def notecard(recipe, output, show) -> int:
     """Recipe index card generator for cocktail recipes.
 
-    Convert the provided RECIPE(s) into a 4x6 notecard in PDF format.
+    Convert the provided RECIPE(s) into individual 4x6 notecard(s).  Saved as PDF.
     """
-    # Setup logging
-    levels = [logging.WARNING, logging.INFO, logging.DEBUG]
-    level = levels[min(2, verbose)]
-    logging.basicConfig(level=level)
-
     for recipe_arg in recipe:
         for recipe_filename in glob.glob(recipe_arg):
             # Load recipe from file.
@@ -250,8 +242,6 @@ def main(recipe, output, show, verbose) -> int:
                             return 0
                         elif event.key == pygame.K_n:
                             showing = False
-
-
 
 
 

@@ -5,10 +5,6 @@ description = "Tools to work with coctail recipes."
 authors = ["Jared Julien <jaredjulien@exsystems.net>"]
 license = "MIT"
 readme = "README.md"
-packages = [
-    { include = "notecard" },
-    { include = "cocktails" }
-]
 
 [tool.poetry.dependencies]
 python = "^3.10"
