@@ -34,18 +34,29 @@ from yaml import safe_load
 # ======================================================================================================================
 # Main Function
 # ----------------------------------------------------------------------------------------------------------------------
-@click.command
-@click.argument('recipes', nargs=-1, type=click.File())
+@click.group()
 @click.option('-v', '--verbose', count=True, help='increase verbosity of output')
-def main(recipes, verbose):
+def cli(verbose):
+    """The cocktail tool - for managing cocktail recipes and ingredients."""
     # Setup logging output.
     levels = [logging.WARNING, logging.INFO, logging.DEBUG]
     level = levels[min(2, verbose)]
     logging.basicConfig(level=level)
 
+
+
+# ======================================================================================================================
+# Ingredient List Command
+# ----------------------------------------------------------------------------------------------------------------------
+@cli.command()
+@click.argument('recipes', nargs=-1, type=click.File())
+def ingredients(recipes):
+    """Aggregate, dedupe, and list all of the ingredients needed to make the provided cocktail RECIPES."""
     ingredients = {}
+    print('Aggregating a list of ingredients for the following drinks:')
     for yaml in recipes:
         recipe = safe_load(yaml)
+        print(f"- [green]{recipe['title']}[/]")
 
         for ingredient in recipe['ingredients']:
             name = ingredient['ingredient']
@@ -53,10 +64,11 @@ def main(recipes, verbose):
                 ingredients[name] = []
             ingredients[name].append(recipe['title'])
 
+    print()
+    print('The following ingredients are needed to be able to make the drinks listed above:')
     for ingredient in sorted(ingredients.keys()):
         recipes = ingredients[ingredient]
-        print(f"- [bold green]{ingredient.title()}[/]: [i]{', '.join(recipes)}")
-
+        print(f"- [bold yellow]{ingredient.title()}[/]: \[[i cyan]{', '.join(recipes)}[/]]")
 
 
 
