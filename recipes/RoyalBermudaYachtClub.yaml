@@ -1,0 +1,26 @@
+title: Royal Bermuda Yacht Club
+version: 1
+source: https://tuxedono2.com/royal-bermuda-yacht-club-cocktail-recipe
+description: A tiki-fied daiquiri that ticks all the right boxes for a refreshing warm weather cocktail.
+preparation: shaken
+served: neat
+glass: coupe
+ingredients:
+- quantity: 2
+  unit: ounce
+  ingredient: rum
+  suggested: Plantation 5 Year
+- quantity: 0.75
+  unit: ounce
+  ingredient: dry curacao
+- quantity: 0.75
+  unit: ounce
+  ingredient: falernum
+- quantity: 0.75
+  unit: ounce
+  ingredient: lime juice
+- ingredient: lime wheel
+  notes: for garnish
+instructions:
+- Combine all ingredients with ice and shake.
+- Double strain into a chilled cocktail glass and garnish with lime wheel.
