@@ -6,7 +6,8 @@ authors = ["Jared Julien <jaredjulien@exsystems.net>"]
 license = "MIT"
 readme = "README.md"
 packages = [
-    { include = "notecard" }
+    { include = "notecard" },
+    { include = "packing" }
 ]
 
 [tool.poetry.dependencies]
@@ -16,6 +17,7 @@ pyyaml = "^6.0.1"
 pillow = "^10.0.0"
 img2pdf = "^0.4.4"
 click = "^8.1.7"
+rich = "^13.7.1"
 
 [tool.poetry.scripts]
 notecard = "notecard.generate:main"
