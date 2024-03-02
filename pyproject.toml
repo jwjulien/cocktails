@@ -7,7 +7,7 @@ license = "MIT"
 readme = "README.md"
 packages = [
     { include = "notecard" },
-    { include = "packing" }
+    { include = "cocktails" }
 ]
 
 [tool.poetry.dependencies]

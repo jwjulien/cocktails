@@ -1,5 +1,5 @@
 # ======================================================================================================================
-#      File:  /packing/__main__.py
+#      File:  /cocktails/main.py
 #   Project:  Cocktail Recipes
 #    Author:  Jared Julien <jaredjulien@exsystems.net>
 # Copyright:  (c) 2024 Jared Julien, eX Systems
@@ -17,14 +17,16 @@
 # OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
 # OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 # ----------------------------------------------------------------------------------------------------------------------
-"""Entry point for the packing list generation tool."""
+"""Packing list generator."""
 
 # ======================================================================================================================
 # Imports
 # ----------------------------------------------------------------------------------------------------------------------
-import sys
+import logging
 
-from main import main
+import click
+from rich import print
+from yaml import safe_load
 
 
 
@@ -32,8 +34,29 @@ from main import main
 # ======================================================================================================================
 # Main Function
 # ----------------------------------------------------------------------------------------------------------------------
-if __name__ == "__main__":
-    sys.exit(main())
+@click.command
+@click.argument('recipes', nargs=-1, type=click.File())
+@click.option('-v', '--verbose', count=True, help='increase verbosity of output')
+def main(recipes, verbose):
+    # Setup logging output.
+    levels = [logging.WARNING, logging.INFO, logging.DEBUG]
+    level = levels[min(2, verbose)]
+    logging.basicConfig(level=level)
+
+    ingredients = {}
+    for yaml in recipes:
+        recipe = safe_load(yaml)
+
+        for ingredient in recipe['ingredients']:
+            name = ingredient['ingredient']
+            if name not in ingredients:
+                ingredients[name] = []
+            ingredients[name].append(recipe['title'])
+
+    for ingredient in sorted(ingredients.keys()):
+        recipes = ingredients[ingredient]
+        print(f"- [bold green]{ingredient.title()}[/]: [i]{', '.join(recipes)}")
+
 
 
 
