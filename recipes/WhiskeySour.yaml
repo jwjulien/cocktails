@@ -1,0 +1,28 @@
+title: Whiskey Sour
+version: 1
+source: https://www.liquor.com/recipes/whiskey-sour/
+description: The great classic complete with egg white for a perfect, foamy head.
+yield: 1
+preparation: shaken
+served: neat
+glass: coupe
+ingredients:
+- quantity: 2
+  unit: ounce
+  ingredient: burbon
+- quantity: 0.75
+  unit: ounce
+  ingredient: lemon juice
+- quantity: 0.5
+  unit: ounce
+  ingredient: simple syrup
+- ingredient: egg white
+- quantity: 4
+  unit: drop
+  ingredient: Angostura bitters
+  notes: for garnish
+instructions:
+- Add burbon, lemon juice, simple syrup and egg white to a shaker.
+- Dry shake for 30 seconds.
+- Add ice and shake well.
+- Strain into a chilled coupe and garnish with 3-4 drops of Angostura bitters.
