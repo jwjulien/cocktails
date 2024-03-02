@@ -22,14 +22,17 @@
 # ======================================================================================================================
 # Imports
 # ----------------------------------------------------------------------------------------------------------------------
-import logging
+import glob
 from importlib import metadata
+import logging
+import os.path
 
 import click
 from rich import print
 from yaml import safe_load
 
 from cocktails.notecard.generate import notecard
+from cocktails.model import Recipe
 
 
 
@@ -76,7 +79,44 @@ def ingredients(recipes):
         print(f"- [bold yellow]{ingredient.title()}[/]: \[[i cyan]{', '.join(recipes)}[/]]")
 
 
+
+
+# ======================================================================================================================
+# Search Command
+# ----------------------------------------------------------------------------------------------------------------------
+@cli.command()
+@click.option('-c', '--contains', multiple=True, help='specify an ingredient the recipe must contain')
+def search(contains):
+    """Search for recipes that contain specific ingredients."""
+    # Start by loading all available recipes from the recipe directory.
+    recipes = []
+    for filename in glob.glob(os.path.join('recipes', '*.yaml')):
+        with open(filename, 'r') as handle:
+            yaml = safe_load(handle)
+            recipe = Recipe.from_dict(yaml)
+        recipes.append(recipe)
+
+    for contain in contains:
+        filtered = []
+        for recipe in recipes:
+            for ingredient in recipe.ingredients:
+                if contain.lower() in ingredient.ingredient.lower():
+                    filtered.append(recipe)
+                    break
+        recipes = filtered
+
+    print(f"Found {len(recipes)} recipes that contain {' AND '.join(contains)}")
+    for recipe in recipes:
+        print(f'- [cyan]{recipe.title}[/]')
+
+
+
+
+# ======================================================================================================================
+# External Commands
+# ----------------------------------------------------------------------------------------------------------------------
 cli.add_command(notecard)
+
 
 
 

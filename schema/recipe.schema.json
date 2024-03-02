@@ -22,25 +22,26 @@
         },
         "yield": {
             "type": "number",
+            "default": 1,
             "$comment": "How many individual drinks this recipe will yield unscaled."
         },
         "preparation": {
             "type": "string",
             "enum": [
+                "blended",
                 "built",
-                "stirred",
                 "shaken",
-                "blended"
+                "stirred"
             ]
         },
         "served": {
             "type": "string",
             "enum": [
                 "neat",
-                "straight up",
                 "on a rock",
+                "on crushed ice",
                 "on the rocks",
-                "on crushed ice"
+                "straight up"
             ]
         },
         "glass": {
