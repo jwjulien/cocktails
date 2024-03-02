@@ -27,10 +27,10 @@ import logging
 import json
 import glob
 from importlib import metadata
-from argparse import ArgumentParser
 from fractions import Fraction
 from io import BytesIO
 
+import click
 os.environ['PYGAME_HIDE_SUPPORT_PROMPT'] = 'true'
 import pygame
 import yaml
@@ -70,50 +70,23 @@ def fraction(value: float) -> str:
 # ======================================================================================================================
 # Main Function
 # ----------------------------------------------------------------------------------------------------------------------
-def main() -> int:
-    description = 'Recipe index card generator for cocktail recipes.'
-    parser = ArgumentParser(description=description)
-    parser.add_argument(
-        'recipe',
-        nargs='+',
-        help='a JSON format cocktail recipe to format into an index card.'
-    )
-    parser.add_argument(
-        '-o',
-        '--output',
-        nargs='?',
-        const=False,
-        help='the path to the PDF to be written'
-    )
-    parser.add_argument(
-        '-s',
-        '--silent',
-        action='store_true',
-        default=False,
-        help='don\'t show the rendering - best used with -o option to just write the PDF'
-    )
-    parser.add_argument(
-        '-v',
-        '--verbose',
-        action='count',
-        default=0,
-        help='increase verbosity of output'
-    )
-    parser.add_argument(
-        '-V',
-        '--version',
-        action='version',
-        version=metadata.version('cocktails'),
-        help='print version number and exit'
-    )
-    args = parser.parse_args()
+@click.command
+@click.argument('recipe', nargs=-1)
+@click.option('-o', '--output', type=click.Path(dir_okay=False), help='path to PDF output')
+@click.option('-s', '--show', is_flag=True, help='pause to view card rendering before exiting')
+@click.option('-v', '--verbose', count=True, help='increase verbosity of output')
+@click.version_option(metadata.version('cocktails'))
+def main(recipe, output, show, verbose) -> int:
+    """Recipe index card generator for cocktail recipes.
 
+    Convert the provided RECIPE(s) into a 4x6 notecard in PDF format.
+    """
     # Setup logging
     levels = [logging.WARNING, logging.INFO, logging.DEBUG]
-    level = levels[min(2, args.verbose)]
+    level = levels[min(2, verbose)]
     logging.basicConfig(level=level)
 
-    for recipe_arg in args.recipe:
+    for recipe_arg in recipe:
         for recipe_filename in glob.glob(recipe_arg):
             # Load recipe from file.
             with open(recipe_filename, 'r', encoding='utf-8') as handle:
@@ -250,28 +223,25 @@ def main() -> int:
             # Show the results
             pygame.display.flip()
 
-            # Determine where to write the output PDF - when specified
-            if args.output is not None:
-                filename = args.output
-                if not filename:
-                    filename = os.path.splitext(os.path.basename(recipe_filename))[0]
-                if not filename.endswith('.pdf'):
-                    filename += '.pdf'
+            # Determine where to write the output PDF.
+            if not output:
+                output = os.path.splitext(os.path.basename(recipe_filename))[0]
+            if not output.endswith('.pdf'):
+                output += '.pdf'
 
-                # Write the rendered result to PDF.
-                data = pygame.image.tobytes(screen, 'RGB')
-                image = Image.frombytes('RGB', (int(width), int(height)), data)
-                file = BytesIO()
-                image.save(file, 'png')
-                file.seek(0)
-                notecard_dimensions = (img2pdf.in_to_pt(6), img2pdf.in_to_pt(4))
-                layout_fun = img2pdf.get_layout_fun(notecard_dimensions)
-                with open(filename, "wb") as handle:
-                    handle.write(img2pdf.convert(file, layout_fun=layout_fun))
+            # Write the rendered result to PDF.
+            data = pygame.image.tobytes(screen, 'RGB')
+            image = Image.frombytes('RGB', (int(width), int(height)), data)
+            file = BytesIO()
+            image.save(file, 'png')
+            file.seek(0)
+            notecard_dimensions = (img2pdf.in_to_pt(6), img2pdf.in_to_pt(4))
+            layout_fun = img2pdf.get_layout_fun(notecard_dimensions)
+            with open(output, "wb") as handle:
+                handle.write(img2pdf.convert(file, layout_fun=layout_fun))
 
             # Show until the user requests to exit.
-            showing = not args.silent
-            while showing:
+            while show:
                 for event in pygame.event.get():
                     if event.type == pygame.QUIT:
                         return 0
