@@ -1,0 +1,25 @@
+title: Daiquiri
+version: 1
+source: https://www.liquor.com/recipes/daiquiri/
+description: A traditional lime based cocktail that could possibly be described as a margarita made with rum.
+yield: 1
+preparation: shaken
+served: neat
+glass: coupe
+ingredients:
+- quantity: 2
+  unit: ounce
+  ingredient: light rum
+- quantity: 1
+  unit: ounce
+  ingredient: lime juice
+- quantity: 0.75
+  unit: ounce
+  ingredient: demerara simple syrup
+- ingredient: lime twist
+  notes: for garnish
+instructions:
+- Add the rum, lime juice, and simple syrup to a shaker.
+- Add ice and shake.
+- Double strain into a chilled coupe.
+- Garnish with a lime twist.
