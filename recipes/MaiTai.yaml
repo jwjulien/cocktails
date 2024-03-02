@@ -9,7 +9,7 @@ glass: highball
 ingredients:
 - quantity: 1
   unit: ounce
-  ingredient: lime juices
+  ingredient: lime juice
 - quantity: 1
   unit: ounce
   ingredient: light rum
@@ -22,7 +22,7 @@ ingredients:
 - quantity: 0.5
   unit: ounce
   ingredient: dark rum
-- ingredient: mint sprig, lime wheel, and/or Maraschino cherry
+- ingredient: mint sprig
   notes: for garnish
 instructions:
 - To a shaker add the lime juice, light rum, curaçao and orgeat syrup.
@@ -30,3 +30,4 @@ instructions:
 - Strain into ice-filled rocks glass.
 - Float dark rum on top.
 - Garnish with mint sprig, lime wheel, and/or Maraschino cherry.
+notes: Maraschino cherries and lime wheels also make great garnish for this drink.

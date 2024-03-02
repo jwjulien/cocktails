@@ -8,23 +8,23 @@ served: on crushed ice
 glass: hurricane
 notes: Pussers holds a trademark for this drink which is why their run is specified.
 ingredients:
-  - quantity: 2
-    unit: ounce
-    ingredient: Pusser's rum
-  - quantity: 4
-    unit: ounce
-    ingredient: pineapple juice
-  - quantity: 1
-    unit: ounce
-    ingredient: fresh orange juice
-  - quantity: 1
-    unit: ounce
-    ingredient: cream of coconut
-  - ingredient: fresh grated nutmeg
-    notes: for garnish
-  - quantity: 1
-    ingredient: pineapple wedge
-    notes: for garnish
+- quantity: 2
+  unit: ounce
+  ingredient: Pusser's rum
+- quantity: 4
+  unit: ounce
+  ingredient: pineapple juice
+- quantity: 1
+  unit: ounce
+  ingredient: orange juice
+- quantity: 1
+  unit: ounce
+  ingredient: cream of coconut
+- ingredient: grated nutmeg
+  notes: for garnish
+- quantity: 1
+  ingredient: pineapple wedge
+  notes: for garnish
 instructions:
 - "Add the rum, pineapple juice, orange juice and cream of coconut to a shaker with cubed ice."
 - "Shake vigorously but briefly to combine."
