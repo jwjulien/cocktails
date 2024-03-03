@@ -31,7 +31,7 @@ import click
 from rich import print
 
 from cocktails.notecard.generate import notecard
-from cocktails.model import Recipe, load_recipe
+from cocktails.model import load_recipe
 from cocktails.show import show
 from cocktails.validate import validate
 

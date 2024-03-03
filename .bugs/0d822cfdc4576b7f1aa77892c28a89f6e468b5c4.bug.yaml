@@ -1,0 +1,12 @@
+title: Switch notecard generation to ReportLab
+type: Feature
+open: true
+author: Jared <jaredjulien@exsystems.net>
+entered: '2024-03-03T11:58:32.946729-05:00'
+what: Now that I have a better understanding of ReportLab I really think it's a better fit for this application.
+why: >-
+  Namely because it'll allow use of vector graphics instead of raster graphics
+  which will significantly increase quality.
+
+  The change would also bring this tool in line with many others I have created recently that successfully make use
+  of ReportLab.
