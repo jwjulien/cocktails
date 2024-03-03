@@ -1,6 +1,6 @@
 Cocktails
 ========================================================================================================================
-After years of struggling to come up with the best forum for aggregating various drink recipes I have landed on this, JSON files.
+After years of struggling to come up with the best forum for aggregating various drink recipes I have landed on this, JSON/YAML files.
 
 My intent here is to capture the recipes needed to make various mixed drinks and cocktails that I enjoy, along with any notes that I have about the ingredients or the preparation, even though I don't really have, nor want to create a fully fledged tool to manage them.
 
@@ -12,7 +12,7 @@ A schema has been developed and is tied to the `ingredients` and `recipes` folde
 
 Anti-Patterns
 ------------------------------------------------------------------------------------------------------------------------
-This repository does not contain "basic" drinks like "rum and coke" or "whisky neat".  If you can fully comprehend a recipe from the title alone, it really doesn't have a place here.
+This repository does not contain "basic" drinks like "rum and coke" or "whisky neat".  If you can fully comprehend a recipe from the title alone, it serves no place here.
 
 
 
