@@ -27,9 +27,8 @@ from rich import box, print
 from rich.columns import Columns
 from rich.console import Group
 from rich.panel import Panel
-from yaml import safe_load
 
-from cocktails.model import Recipe, Glass
+from cocktails.model import Recipe, Glass, load_recipe
 from cocktails.notecard.generate import fraction
 
 
@@ -39,10 +38,10 @@ from cocktails.notecard.generate import fraction
 # Show Command
 # ----------------------------------------------------------------------------------------------------------------------
 @click.command()
-@click.argument('recipe', type=click.File())
+@click.argument('recipe', type=click.Path(exists=True, dir_okay=False))
 def show(recipe):
     """Show the specified RECIPE in the terminal."""
-    recipe = Recipe.from_dict(safe_load(recipe))
+    recipe = load_recipe(recipe)
 
     top = recipe.description + '\n'
 

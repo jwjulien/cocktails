@@ -27,7 +27,11 @@ Follows the same schema as the .json schema located in the schema folder.
 # ----------------------------------------------------------------------------------------------------------------------
 import dataclasses
 from enum import Enum
+import json
+import os.path
 from typing import Dict, List
+
+import yaml
 
 
 
@@ -186,6 +190,22 @@ class Recipe:
         if self.notes:
             data['notes'] = self.notes
 
+
+
+
+# ======================================================================================================================
+# Helper Functions
+# ----------------------------------------------------------------------------------------------------------------------
+def load_recipe(filename: str) -> Recipe:
+    """Load a recipe (either in .json or .yaml format) from the provided filename and return a parsed Recipe object."""
+    with open(filename, 'r') as handle:
+        if filename.endswith('.json'):
+            data = json.load(handle)
+        elif filename.endswith('.yaml'):
+            data = yaml.safe_load(handle)
+        else:
+            raise ValueError(f'Unsupported recipe format: {os.path.splitext(filename)[1]}')
+    return Recipe.from_dict(data)
 
 
 

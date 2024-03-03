@@ -23,8 +23,6 @@
 # Imports
 # ----------------------------------------------------------------------------------------------------------------------
 import os
-import logging
-import json
 import glob
 from fractions import Fraction
 from io import BytesIO
@@ -32,13 +30,13 @@ from io import BytesIO
 import click
 os.environ['PYGAME_HIDE_SUPPORT_PROMPT'] = 'true'
 import pygame
-import yaml
 from PIL import Image
 import img2pdf
 
+from cocktails.model import load_recipe, Glass
 from cocktails.notecard import colors
-from notecard.textbox import TextBox
-from notecard.geometry import Point
+from cocktails.notecard.textbox import TextBox
+from cocktails.notecard.geometry import Point
 
 
 
@@ -81,14 +79,7 @@ def notecard(recipe, output, show) -> int:
     for recipe_arg in recipe:
         for recipe_filename in glob.glob(recipe_arg):
             # Load recipe from file.
-            with open(recipe_filename, 'r', encoding='utf-8') as handle:
-                if recipe_filename.endswith('.json'):
-                    recipe = json.load(handle)
-                elif recipe_filename.endswith('.yaml'):
-                    recipe = yaml.safe_load(handle)
-                else:
-                    logging.critical('Unsupported recipe format: %s', os.path.splitext(recipe_filename)[1])
-                    return 1
+            recipe = load_recipe(recipe_filename)
 
             scale = 0.5
 
@@ -122,69 +113,69 @@ def notecard(recipe, output, show) -> int:
             y = margin
 
             # If there's an author, give them credit.
-            if 'author' in recipe:
+            if recipe.author:
                 author = TextBox(width - (margin * 2), font=body)
-                author.add(recipe['author'] + "'s", color=colors.GRAY, italic=True)
+                author.add(recipe.author + "'s", color=colors.GRAY, italic=True)
                 y = author.render(screen, Point(margin, y)).y
 
             # Then a version.
             version = TextBox(width / 4, font=small)
-            version.add(f"Version: {recipe['version']}", italic=True, color=colors.GRAY)
+            version.add(f"Version: {recipe.version}", italic=True, color=colors.GRAY)
             # TODO: This magic 200 offset is not the ideal way to right-align the version number.
             version.render(screen, Point(width - margin - (200 * scale), y))
 
             # Next, a title.
             title = TextBox(width - (margin * 2), font=h1)
-            title.add(recipe['title'], underline=True)
+            title.add(recipe.title, underline=True)
             y = title.render(screen, Point(margin, y)).y
             y += spacing
 
             # Add the description.
-            if 'description' in recipe:
+            if recipe.description:
                 description = TextBox(width - margin * 2, font=body)
-                description.add(recipe['description'])
+                description.add(recipe.description)
                 y = description.render(screen, Point(margin, y)).y
                 y += spacing
 
             # Add ingredients to the left.
             ingredients = TextBox(width / 2, font=body, line_height=1.2, indent=20)
-            for ingredient in recipe['ingredients']:
+            for ingredient in recipe.ingredients:
                 text = '• '
                 quantity = 1
-                if 'quantity' in ingredient:
-                    quantity = ingredient['quantity']
+                if ingredient.quantity:
+                    quantity = ingredient.quantity
                     text += fraction(quantity) + ' '
-                if 'unit' in ingredient:
-                    text += ingredient['unit']
+                if ingredient.unit:
+                    text += ingredient.unit.value
                     if quantity > 1:
                         text += 's'
                     text += ' '
                 ingredients.add(text)
-                ingredients.add(ingredient['ingredient'], bold=True)
-                if 'suggested' in ingredient:
-                    ingredients.add(f" ({ingredient['suggested']})", italic=True)
-                if 'examples' in ingredient:
-                    examples = ', '.join(ex for ex in ingredient['examples'] if ex != ingredient.get('suggested'))
+                ingredients.add(ingredient.ingredient, bold=True)
+                if ingredient.suggested:
+                    ingredients.add(f" ({ingredient.suggested})", italic=True)
+                if ingredient.examples:
+                    examples = ', '.join(ex for ex in ingredient.examples if ex != ingredient.suggested)
                     ingredients.add(f' [e.g. {examples}]', italic=True)
-                if 'notes' in ingredient:
-                    ingredients.add(f", {ingredient['notes']}", italic=True, color=colors.GRAY)
+                if ingredient.notes:
+                    ingredients.add(f", {ingredient.notes}", italic=True, color=colors.GRAY)
                 ingredients.add('\n')
             y1 = ingredients.render(screen, Point(margin, y)).y
 
             # Add details (preparation, yield, glass, style, etc.) to the right.
             details = TextBox((width / 2) - (margin * 2), font=body, line_height=1.2, indent=20)
-            if 'yield' in recipe:
-                details.add(f"Yield: {recipe['yield']} ")
-                details.add('shot' if recipe.get('glass') == 'shot' else 'drink')
-                if recipe['yield'] > 1:
+            if recipe.yield_:
+                details.add(f"Yield: {recipe.yield_} ")
+                details.add('shot' if recipe.glass == Glass.Shot else 'drink')
+                if recipe.yield_ > 1:
                     details.add('s')
                 details.add('\n')
-            if 'preparation' in recipe:
-                details.add(f"Preparation: {recipe['preparation'].title()}\n")
-            if 'served' in recipe:
-                details.add(f"Served: {recipe['served'].title()}\n")
-            if 'glass' in recipe:
-                details.add(f"In a: {recipe['glass'].title()} Glass\n")
+            if recipe.preparation:
+                details.add(f"Preparation: {recipe.preparation.value.title()}\n")
+            if recipe.served:
+                details.add(f"Served: {recipe.served.value.title()}\n")
+            if recipe.glass:
+                details.add(f"In a: {recipe.glass.value.title()} Glass\n")
             if details:
                 y2 = details.render(screen, Point(width / 2 + margin * 2, y)).y
             else:
@@ -195,21 +186,21 @@ def notecard(recipe, output, show) -> int:
 
             # Add instructions.
             instructions = TextBox(width - margin *2, font=body, line_height=1.2, indent=20)
-            for idx, instruction in enumerate(recipe['instructions']):
+            for idx, instruction in enumerate(recipe.instructions):
                 instructions.add(f'{idx + 1}. {instruction}\n')
             y = instructions.render(screen, Point(margin, y)).y
             y += spacing
 
             # Add notes section.
-            if 'notes' in recipe:
+            if recipe.notes:
                 notes = TextBox(width - margin * 2, font=body)
-                notes.add(recipe['notes'], italic=True)
+                notes.add(recipe.notes, italic=True)
                 y = notes.render(screen, Point(margin, y)).y
 
             # Show source, if provided.
-            if 'source' in recipe:
+            if recipe.source:
                 source = TextBox(width - margin * 2, font=small)
-                source.add(f"Source: {recipe['source']}", italic=True, color=colors.GRAY)
+                source.add(f"Source: {recipe.source}", italic=True, color=colors.GRAY)
                 source.render(screen, Point(margin, height - margin))
 
             # Show the results

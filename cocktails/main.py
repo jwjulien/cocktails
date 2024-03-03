@@ -29,10 +29,9 @@ import os.path
 
 import click
 from rich import print
-from yaml import safe_load
 
 from cocktails.notecard.generate import notecard
-from cocktails.model import Recipe
+from cocktails.model import Recipe, load_recipe
 from cocktails.show import show
 from cocktails.validate import validate
 
@@ -59,20 +58,20 @@ def cli(verbose):
 # Ingredient List Command
 # ----------------------------------------------------------------------------------------------------------------------
 @cli.command()
-@click.argument('recipes', nargs=-1, type=click.File())
+@click.argument('recipes', nargs=-1, type=click.Path(exists=True, dir_okay=False))
 def ingredients(recipes):
     """Aggregate, dedupe, and list all of the ingredients needed to make the provided cocktail RECIPES."""
     ingredients = {}
     print('Aggregating a list of ingredients for the following drinks:')
-    for yaml in recipes:
-        recipe = safe_load(yaml)
-        print(f"- [green]{recipe['title']}[/]")
+    for recipe in recipes:
+        recipe = load_recipe(recipe)
+        print(f"- [green]{recipe.title}[/]")
 
-        for ingredient in recipe['ingredients']:
-            name = ingredient['ingredient']
+        for ingredient in recipe.ingredients:
+            name = ingredient.ingredient
             if name not in ingredients:
                 ingredients[name] = []
-            ingredients[name].append(recipe['title'])
+            ingredients[name].append(recipe.title)
 
     print()
     print('The following ingredients are needed to be able to make the drinks listed above:')
@@ -93,10 +92,7 @@ def search(contains):
     # Start by loading all available recipes from the recipe directory.
     recipes = []
     for filename in glob.glob(os.path.join('recipes', '*.yaml')):
-        with open(filename, 'r') as handle:
-            yaml = safe_load(handle)
-            recipe = Recipe.from_dict(yaml)
-        recipes.append(recipe)
+        recipes.append(load_recipe(filename))
 
     for contain in contains:
         filtered = []
