@@ -1,0 +1,12 @@
+title: Add similar ingredient lookup to validation
+type: Feature
+open: true
+author: Jared <jaredjulien@exsystems.net>
+entered: '2024-03-03T13:02:49.825029-05:00'
+what: When validating a recipe, lookup (fuzzy string match) ingredients in other recipes that are similar sounding.
+why: >-
+  It's been very common for me to use slightly different names for the same ingredient across multiple recipes.
+
+  It would be nice if I could get a warning to correct it at recipe creation time rather than when trying to use the
+  ingredients or search commands and noticing a recipe is missing from the output.
+how: Present the user with warning s suggesting they sound similar.

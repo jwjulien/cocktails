@@ -1,0 +1,19 @@
+title: Add an option to serach for recipes with 1-2 missing ingredients
+type: Feature
+open: true
+author: Jared <jaredjulien@exsystems.net>
+entered: '2024-03-03T13:08:25.391713-05:00'
+what: Give ability to search for recipe that have a set of ingredients but may be missing 1 or 2.
+why: >-
+  I think this would be an excellent use of the tool to help find recipe:
+
+  1. That could be made only with ingredients on hand (no missing items).
+      - i.e. feed it everything you've got in the pantry and it'll tell you everything you could make.
+  2. Some missing items.
+      - Like maybe you're packing ingredients for a trip and you want to know what else you could make if you wanted to
+        pack 1 or two more ingredients.
+      - It would be particularly cool if this could offer suggestions of ingredients by the quantity of additional
+        recipes that could be made.
+how: >-
+  - Add `ingredients` option to the search function.
+  - Add `missing` option to specify the integer number of missing ingredients to allow.

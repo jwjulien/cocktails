@@ -59,13 +59,16 @@ def cli(verbose):
 # ----------------------------------------------------------------------------------------------------------------------
 @cli.command()
 @click.argument('recipes', nargs=-1, type=click.Path(exists=True, dir_okay=False))
-def ingredients(recipes):
+@click.option('-m', '--minimal', is_flag=True, help='limit output to one ingredient per line (great for piping!)')
+def ingredients(recipes, minimal):
     """Aggregate, dedupe, and list all of the ingredients needed to make the provided cocktail RECIPES."""
     ingredients = {}
-    print('Aggregating a list of ingredients for the following drinks:')
+    if not minimal:
+        print('Aggregating a list of ingredients for the following drinks:')
     for recipe in recipes:
         recipe = load_recipe(recipe)
-        print(f"- [green]{recipe.title}[/]")
+        if not minimal:
+            print(f"- [green]{recipe.title}[/]")
 
         for ingredient in recipe.ingredients:
             name = ingredient.ingredient
@@ -73,11 +76,15 @@ def ingredients(recipes):
                 ingredients[name] = []
             ingredients[name].append(recipe.title)
 
-    print()
-    print('The following ingredients are needed to be able to make the drinks listed above:')
+    if not minimal:
+        print()
+        print('The following ingredients are needed to be able to make the drinks listed above:')
     for ingredient in sorted(ingredients.keys()):
         recipes = ingredients[ingredient]
-        print(f"- [bold yellow]{ingredient.title()}[/]: \[[i cyan]{', '.join(recipes)}[/]]")
+        if minimal:
+            print(ingredient)
+        else:
+            print(f"- [bold yellow]{ingredient.title()}[/]: \[[i cyan]{', '.join(recipes)}[/]]")
 
 
 
