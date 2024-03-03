@@ -2,7 +2,6 @@ title: Dirty Martini
 version: 1
 description: Not exactly a traditional dirty martini, but rather the way that I and my family like them.
 author: Adam Webb
-notes: Props to my brother-in-law Adam for this specific twist (pun intended) on a dirty martini.
 yield: 1
 preparation: shaken
 served: on the rocks
@@ -18,9 +17,6 @@ ingredients:
   unit: ounce
   ingredient: olive brine
   suggested: Barsmith olive brine
-  notes: Olive brine from a jar of olives in traditional, however, I have always preferred
-    the taste of the Barsmith brand dirty martini olive brine more.  Just my personal
-    opinion.
 - quantity: 3
   ingredient: blue cheese stuffed olives
 instructions:
@@ -30,3 +26,6 @@ instructions:
 - Seal and shake vigorously until chilled, about 15 seconds.
 - Double strain into prepared glass.
 - Serve garnished with blue cheese olives on a pick.
+notes: >-
+  Olive brine from a jar of olives in traditional, however, I have always preferred the
+  taste of the Barsmith brand dirty martini olive brine more.  Just my personal opinion.

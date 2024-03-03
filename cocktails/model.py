@@ -91,7 +91,7 @@ class Glass(Enum):
 @dataclasses.dataclass
 class Ingredient:
     ingredient: str
-    unit: Unit = 'each'
+    unit: Unit = None
     quantity: float = 1.0
     notes: str = None
     suggested: str = None

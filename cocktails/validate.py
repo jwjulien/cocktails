@@ -1,6 +1,6 @@
 # ======================================================================================================================
 #      File:  /cocktails/validate.py
-#   Project:  Coctail Recipes
+#   Project:  Cocktail Recipes
 #    Author:  Jared Julien <jaredjulien@exsystems.net>
 # Copyright:  (c) 2024 Jared Julien, eX Systems
 # ---------------------------------------------------------------------------------------------------------------------

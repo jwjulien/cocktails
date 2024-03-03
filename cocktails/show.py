@@ -1,6 +1,6 @@
 # ======================================================================================================================
 #      File:  /cocktails/show.py
-#   Project:  Coctail Recipes
+#   Project:  Cocktail Recipes
 #    Author:  Jared Julien <jaredjulien@exsystems.net>
 # Copyright:  (c) 2024 Jared Julien, eX Systems
 # ---------------------------------------------------------------------------------------------------------------------
@@ -23,11 +23,14 @@
 # Imports
 # ----------------------------------------------------------------------------------------------------------------------
 import click
-from rich import print
+from rich import box, print
+from rich.columns import Columns
+from rich.console import Group
 from rich.panel import Panel
 from yaml import safe_load
 
-from cocktails.model import Recipe
+from cocktails.model import Recipe, Glass
+from cocktails.notecard.generate import fraction
 
 
 
@@ -41,6 +44,57 @@ def show(recipe):
     """Show the specified RECIPE in the terminal."""
     recipe = Recipe.from_dict(safe_load(recipe))
 
+    top = recipe.description + '\n'
+
+    left = ''
+    for ingredient in recipe.ingredients:
+        left += '- '
+        if ingredient.quantity:
+            left += fraction(ingredient.quantity) + ' '
+        if ingredient.unit:
+            left += ingredient.unit.value.title()
+            if ingredient.quantity > 1:
+                left += 's'
+            left += ' '
+        left += f'[bold]{ingredient.ingredient}[/bold][italic]'
+        if ingredient.suggested:
+            left += f" ({ingredient.suggested})"
+        if ingredient.examples:
+            examples = ', '.join(ex for ex in ingredient.examples if ex != ingredient.suggested)
+            left += f' \[e.g. {examples}]'
+        if ingredient.notes:
+            left += f"[gray], {ingredient.notes}[/gray]"
+        left += '[/]\n'
+
+    center = '\n'.join(f'{idx + 1}. {instruction}' for idx, instruction in enumerate(recipe.instructions))
+
+    right = f'Version: {recipe.version}\n'
+    if recipe.yield_:
+        unit = 'shot' if recipe.glass == Glass.Shot else 'drink'
+        plural = 's' if recipe.yield_ != 1 else ''
+        right += f"Yield: {recipe.yield_} {unit}{plural}\n"
+    if recipe.preparation:
+        right += f"Preparation: {recipe.preparation.value.title()}\n"
+    if recipe.served:
+        right += f"Served: {recipe.served.value.title()}\n"
+    if recipe.glass:
+        right += f"In a: {recipe.glass.value.title()}\n"
+
+    columns = Columns([left, center, right], expand=True)
+
+    title = ''
+    if recipe.author:
+        title = f"[i]{recipe.author}'s[/] "
+    title += f'[bold magenta]{recipe.title}[/]'
+
+    if recipe.notes:
+        content = Group(top, columns, recipe.notes)
+    else:
+        content = Group(top, columns)
+
+    panel = Panel(content, box=box.ROUNDED, title=title, subtitle=recipe.source or '', subtitle_align='left')
+
+    print(panel)
 
 
 
