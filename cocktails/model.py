@@ -159,6 +159,7 @@ class Recipe:
             glass=Glass(data['glass']) if 'glass' in data else None,
             notes=data.get('notes'),
         )
+    # TODO: What about extra fields in the dict?
 
 
     def to_dict(self) -> Dict:
