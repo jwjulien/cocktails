@@ -35,6 +35,22 @@ from typing import Dict, List
 # ======================================================================================================================
 # Enumerations
 # ----------------------------------------------------------------------------------------------------------------------
+class Unit(Enum):
+    Barspoon = 'barspoon'
+    Cup = 'cup'
+    Dash = 'dash'
+    Drop = 'drop'
+    Gram = 'gram'
+    Ounce = 'ounce'
+    Rinse = 'rinse'
+    Splash = 'splash'
+    Spritz = 'spritz'
+    Teaspoon = 'teaspoon'
+    Tablespoon = 'tablespoon'
+    Twist = 'twist'
+
+
+# ----------------------------------------------------------------------------------------------------------------------
 class Preparation(Enum):
     Blended = 'blended'
     Built = 'built'
@@ -75,7 +91,7 @@ class Glass(Enum):
 @dataclasses.dataclass
 class Ingredient:
     ingredient: str
-    unit: str = 'each'
+    unit: Unit = 'each'
     quantity: float = 1.0
     notes: str = None
     suggested: str = None
@@ -86,7 +102,7 @@ class Ingredient:
     def from_dict(data: Dict) -> 'Ingredient':
         return Ingredient(
             ingredient=data['ingredient'],
-            unit=data.get('unit'),
+            unit=Unit(data['unit']) if 'unit' in data else None,
             quantity=data.get('quantity'),
             notes=data.get('notes'),
             suggested=data.get('suggested'),
@@ -99,6 +115,8 @@ class Ingredient:
         for attribute in ['ingredient', 'unit', 'quantity', 'notes', 'suggested', 'examples]']:
             value = getattr(self, attribute)
             if value:
+                if isinstance(value, Enum):
+                    value = value.value()
                 data[attribute] = value
         return data
 
