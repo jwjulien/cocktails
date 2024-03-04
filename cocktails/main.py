@@ -22,16 +22,19 @@
 # ======================================================================================================================
 # Imports
 # ----------------------------------------------------------------------------------------------------------------------
+import dataclasses
 import glob
 from importlib import metadata
 import logging
 import os.path
+import sys
 
 import click
 from rich import print
 
 from cocktails.notecard.generate import notecard
 from cocktails.model import load_recipe
+from cocktails.search import search
 from cocktails.show import show
 from cocktails.validate import validate
 
@@ -90,39 +93,12 @@ def ingredients(recipes, minimal):
 
 
 # ======================================================================================================================
-# Search Command
-# ----------------------------------------------------------------------------------------------------------------------
-@cli.command()
-@click.option('-c', '--contains', multiple=True, help='specify an ingredient the recipe must contain')
-def search(contains):
-    """Search for recipes that contain specific ingredients."""
-    # Start by loading all available recipes from the recipe directory.
-    recipes = []
-    for filename in glob.glob(os.path.join('recipes', '*.yaml')):
-        recipes.append(load_recipe(filename))
-
-    for contain in contains:
-        filtered = []
-        for recipe in recipes:
-            for ingredient in recipe.ingredients:
-                if contain.lower() in ingredient.ingredient.lower():
-                    filtered.append(recipe)
-                    break
-        recipes = filtered
-
-    print(f"Found {len(recipes)} recipes that contain {' AND '.join(contains)}")
-    for recipe in recipes:
-        print(f'- [cyan]{recipe.title}[/]')
-
-
-
-
-# ======================================================================================================================
 # External Commands
 # ----------------------------------------------------------------------------------------------------------------------
 cli.add_command(notecard)
 cli.add_command(validate)
 cli.add_command(show)
+cli.add_command(search)
 
 
 
