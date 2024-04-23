@@ -1,0 +1,27 @@
+title: Dark & Stormy
+version: 1
+source: https://www.liquor.com/recipes/dark-n-stormy/
+description: A Moscow Mule but with rum!
+yield: 1
+preparation: built
+served: on crushed ice
+glass: lowball
+ingredients:
+- quantity: 2
+  unit: ounce
+  ingredient: dark rum
+  suggested: Goslings
+- quantity: 0.5
+  unit: ounce
+  ingredient: lime juice
+- quantity: 5
+  unit: ounce
+  ingredient: ginger beer
+  notes: approximate
+- quantity: 1
+  ingredient: lime wheel
+  notes: for garnish
+instructions:
+- Add rum and lime juice to a tall glass filled with ice.
+- Top with ginger beer.
+- Garnish with a lime wheel.
