@@ -1,0 +1,32 @@
+title: Left Hand
+version: 1
+author: Sam Ross
+source: https://www.liquor.com/left-hand-cocktail-recipe-6743050
+description: >-
+  An incredible take on a Boulevardier that has layer upon layer of evolution featuring the tobacco notes of the burbon,
+  the bitter citrus notes of Campari and much more in between.
+notes: Greg Titian of How to Drink fame on YouTube claims this is the drink that started it all for him and it's obvious why.
+yield: 1
+preparation: stirred
+served: straight up
+glass: coupe
+ingredients:
+- quantity: 1.5
+  unit: ounce
+  ingredient: burbon
+- quantity: 0.75
+  unit: ounce
+  ingredient: Campari
+- quantity: 0.75
+  unit: ounce
+  ingredient: sweet vermouth
+  suggested: Carpano Antica
+- quantity: 3
+  unit: dash
+  ingredient: cocoa bitters
+- ingredient: brandied cherry
+  notes: for garnish
+instructions:
+- Add all ingredients into a mixing glass with ice and stir until well-chilled.
+- Strain into a chilled coupe glass.
+- Garnish with a brandied cherry.
