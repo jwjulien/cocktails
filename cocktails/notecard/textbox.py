@@ -27,7 +27,7 @@ from dataclasses import dataclass, field
 
 import pygame
 
-from notecard.geometry import Point, Rectangle
+from cocktails.notecard.geometry import Point, Rectangle
 from cocktails.notecard import colors
 
 

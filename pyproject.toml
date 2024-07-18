@@ -16,7 +16,7 @@ click = "^8.1.7"
 rich = "^13.7.1"
 
 [tool.poetry.scripts]
-notecard = "notecard.generate:main"
+cocktails = "cocktails.main:cli"
 
 [build-system]
 requires = ["poetry-core"]
