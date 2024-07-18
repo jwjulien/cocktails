@@ -1,0 +1,33 @@
+title: Rum Punch
+version: 1
+description: The summer tiki cocktail.  Certainly not fancy, but always tasty.
+source: https://www.liquor.com/recipes/rum-punch/
+preparation: shaken
+served: on crushed ice
+glass: hurricane
+ingredients:
+- quantity: 1.25
+  unit: ounce
+  ingredient: light rum
+- quantity: 1.25
+  unit: ounce
+  ingredient: dark rum
+- quantity: 2
+  unit: ounce
+  ingredient: pineapple juice
+- quantity: 1
+  unit: ounce
+  ingredient: orange juice
+- quantity: 0.75
+  unit: ounce
+  ingredient: lime juice
+- quantity: 0.5
+  unit: ounce
+  ingredient: grenadine
+- ingredient: maraschino cherry
+  notes: for garnish
+instructions:
+- Combine light rum, dark rum, pineapple juice, orange juice, lime juice in shaker.
+- Add ice and shake.
+- Strain into a hurricane glass over fresh crushed ice.
+- Garnish with a maraschino or brandied cherry.
