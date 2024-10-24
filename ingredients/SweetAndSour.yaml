@@ -1,0 +1,22 @@
+title: Sweet & Sour Mix
+version: 1
+source: https://abeautifulmess.com/make-your-own-sour-mix/
+description: A fairly standard mix for a number of drinks such as whisky sour or amaretto sour.
+ingredients:
+- quantity: 1
+  unit: cup
+  ingredient: granulated sugar
+- quantity: 1
+  unit: cup
+  ingredient: water
+- quantity: 1
+  unit: cup
+  ingredient: lemon juice
+- quantity: 0.5
+  unit: cup
+  ingredient: lime juice
+instructions:
+- Combine the sugar and water in a sauce pan, heat and stir until sugar is dissolved.
+- Remove from heat and stir in lemon and lime juices.
+- Cool completely before straining into a bottle for storage.
+notes: Stays good in the fridge for about a month.

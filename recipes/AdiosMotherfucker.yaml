@@ -1,0 +1,38 @@
+title: Adios Motherfucker
+version: 1
+source: https://www.liquor.com/recipes/adios-motherfucker-2/
+preparation: built
+served: on the rocks
+glass: highball
+ingredients:
+- quantity: 0.5
+  unit: ounce
+  ingredient: vodka
+- quantity: 0.5
+  unit: ounce
+  ingredient: rum
+- quantity: 0.5
+  unit: ounce
+  ingredient: tequila
+- quantity: 0.5
+  unit: ounce
+  ingredient: gin
+- quantity: 0.5
+  unit: ounce
+  ingredient: blue curacao
+- quantity: 2
+  unit: ounce
+  ingredient: sweet an sour mix
+- quantity: 4
+  unit: ounce
+  ingredient: sprite
+  notes: maybe more, to top
+- ingredient: lemon wedge
+  notes: for garnish
+- ingredient: brandied cherry
+  notes: for garnish
+instructions:
+- Add the vodka, rum, tequila, gin, blue curacao, and sweet and sour mix to a highball glass.
+- Add ice and stir.
+- Top up with Sprite or 7up.
+- Garnish with lemon wedge and cherry, if desired.
