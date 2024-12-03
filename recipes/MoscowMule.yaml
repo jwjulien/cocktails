@@ -1,0 +1,26 @@
+title: Moscow Mule
+version: 1
+source: https://www.liquor.com/recipes/moscow-mule-cocktail-recipe/
+description: >-
+  This classic, lightly bubbly, lime and ginger cocktail is known for being served in it's iconic
+  copper mug but a highball will suit when one isn't available.
+preparation: built
+served: on crushed ice
+glass: copper mug
+ingredients:
+- quantity: 2
+  unit: ounce
+  ingredient: vodka
+- quantity: 0.5
+  unit: ounce
+  ingredient: lime juice
+- quantity: 3
+  unit: ounce
+  ingredient: ginger beer
+- ingredient: lime wheel
+  notes: for garnish
+instructions:
+- Fill a copper mug (or glass) with crushed ice.
+- Add the vodka and lime juice.
+- Top with ginger beer.
+- Garnish with lime wheel.
