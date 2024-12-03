@@ -75,6 +75,7 @@ class Served(Enum):
 class Glass(Enum):
     Collins = 'collins'
     Coupe = 'coupe'
+    CopperMug = 'copper mug'
     Fishbowl = 'fishbowl'
     Highball = 'highball'
     Hurricane = 'hurricane'
